@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Sean/Documents/CSCI5607/test/src/SomeClass.cpp
+SomeClass.hpp
+/Users/Sean/Documents/CSCI5607/test/src/SomeClass.hpp
+
+/Users/Sean/Documents/CSCI5607/test/src/SomeClass.hpp
+sstream
+-
+
+/Users/Sean/Documents/CSCI5607/test/src/main.cpp
+SomeClass.hpp
+/Users/Sean/Documents/CSCI5607/test/src/SomeClass.hpp
+vector
+-
+iostream
+-
+fstream
+-
+sstream
+-
+

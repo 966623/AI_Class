@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Sean/Documents/CSCI5607/Assignment00/src/ImgSettings.cpp
+ImgSettings.hpp
+/Users/Sean/Documents/CSCI5607/Assignment00/src/ImgSettings.hpp
+tuple
+-
+vector
+-
+
+/Users/Sean/Documents/CSCI5607/Assignment00/src/ImgSettings.hpp
+tuple
+-
+vector
+-
+sstream
+-
+
+/Users/Sean/Documents/CSCI5607/Assignment00/src/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+tuple
+-
+ImgSettings.hpp
+/Users/Sean/Documents/CSCI5607/Assignment00/src/ImgSettings.hpp
+

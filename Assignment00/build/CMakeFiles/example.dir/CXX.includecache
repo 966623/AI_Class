@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Sean/Documents/CSCI5607/Assignment00/src/SomeClass.cpp
+SomeClass.hpp
+/Users/Sean/Documents/CSCI5607/Assignment00/src/SomeClass.hpp
+
+/Users/Sean/Documents/CSCI5607/Assignment00/src/SomeClass.hpp
+sstream
+-
+
+/Users/Sean/Documents/CSCI5607/Assignment00/src/main.cpp
+iostream
+-
+
