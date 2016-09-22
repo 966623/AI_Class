@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.6)
 
 # We can set C++ flags (like optimizations) here. We'll compile with c++11 since it
 # has a lot of classes that will be useful.
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -std=gnu++11")
 
 # We also have to assign a project name and set the language used. In this case, we're
 # calling it "example" and will be using C and C++:
