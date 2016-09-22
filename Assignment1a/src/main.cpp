@@ -277,6 +277,7 @@ void render(Image &img, Camera &cam, vector<Object*> &obj, vector<Material*> &mt
     Vec3 offsetV = (cam.ll - cam.ul)/(img.height - 1);
     Vec3 offsetH = (cam.ur - cam.ul)/(img.width - 1);
 
+    // Calculate pixels
     for(int y = 0; y < img.height; y++){
         for(int x = 0; x < img.width; x++){
             
@@ -297,14 +298,18 @@ void render(Image &img, Camera &cam, vector<Object*> &obj, vector<Material*> &mt
             }
             // Choose nearest intersection and write color to image. If no intersection write background color
             if (distance < 0){
-                file << (int)(img.bkg.x * maxColor) << " " << (int)(img.bkg.y * maxColor) << " "  << (int)(img.bkg.z * maxColor )<< "\n";
+                img.set(x, y, img.bkg);
             }
             else{
                 Material *m = mtl[material];
-                file << (int)(m->color.x * maxColor)<< " " << (int)(m->color.y * maxColor) << " "  << (int)(m->color.z * maxColor) << "\n";
+                img.set(x, y, m->color);
             }
         }
     }
+
+    img.write(file);
+
+
 }
 
 void readFile(char* fileName, ifstream& stream){
