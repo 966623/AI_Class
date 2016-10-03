@@ -2,3 +2,6 @@
 *.ppm
 *.png
 */build/*
+*.zip
+*.pdf
+*.pages

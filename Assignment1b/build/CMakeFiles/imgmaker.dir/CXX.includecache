@@ -53,6 +53,12 @@ Vec3.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1b/src/Vec3.hpp
 Entity.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1b/src/Entity.hpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
 
 /Users/Sean/Documents/CSCI5607/Assignment1b/src/Ellipsoid.cpp
 Ellipsoid.hpp
@@ -131,6 +137,12 @@ fstream
 -
 Vec3.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1b/src/Vec3.hpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
 
 /Users/Sean/Documents/CSCI5607/Assignment1b/src/ImgSettings.cpp
 ImgSettings.hpp
@@ -195,6 +207,12 @@ string.h
 -
 Vec3.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1b/src/Vec3.hpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
 
 /Users/Sean/Documents/CSCI5607/Assignment1b/src/Object.cpp
 Object.hpp
@@ -308,6 +326,10 @@ string.h
 math.h
 -
 iostream
+-
+stdio.h
+-
+stdlib.h
 -
 Vec3.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1b/src/Vec3.hpp

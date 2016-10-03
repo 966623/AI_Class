@@ -3,14 +3,21 @@ imsize 640 480
 updir	0 100 0
 viewdir 3 0 -4	
 fovv  60
-bkgcolor .2 .2 .8
+bkgcolor .1 .1 .4
 
-# DIRECTIONAL
-light 10 -10 0 0 .75 .75 .75
-light 0 -10 -10 0 .25 .25 .25
 
 # POINT
-# light -5 2 0 1 1 1 1
+light -5 -.5 0 1 0.3 0 0
+light -3 -.5 3 1 0.3 0.15 0
+light 0 -.5 5 1 0.3 0.3 0
+light 3 -.5 3 1 0 0.3 0
+light 5 -.5 0 1 0 0.3 .3
+light 3 -.5 -3 1 0 0 .3
+light 0 -.5 -5 1 0.1 0 .3
+light -3 -.5 -3 1 0.2 0 .3
+
+# SPOT
+spotlight 0 5 3 0 -5 -3 20 .5 .5 .5
 
 mtlcolor .9 .9 .9 1 1 1 .2 .8 .4 50
 sphere 0 0 0 1
@@ -37,4 +44,6 @@ ellipsoid 0 2.625 .65 .05 .05 .4
 
 mtlcolor .2 .8 .2 .4 1 .4 .2 .8 .4 50
 ellipsoid 0 -1.05 0 10 .1 10
+
+
 
