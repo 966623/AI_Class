@@ -1,5 +1,6 @@
 #ifndef Vec3_HPP
 #define Vec3_HPP
+#define _USE_MATH_DEFINES
 
 #include <tuple>
 #include <vector>
@@ -99,6 +100,12 @@ class Vec3 {
 				z = max;
 
 
+		}
+
+		float angle(Vec3 &v){
+			float a = dot(v)/(magnitude()*v.magnitude());
+			a = acos(a);
+			return a;
 		}
 
 		string to_str(){

@@ -1,5 +1,5 @@
-#ifndef UvCoord_HPP
-#define UvCoord_HPP
+#ifndef Normal_HPP
+#define Normal_HPP
 
 #include <tuple>
 #include <vector>
@@ -13,22 +13,22 @@
 
 using namespace std;
 
-class UvCoord{
+class Normal{
 	public:
 
-		Vec3 coord;
+		Vec3 dir;
 		float x;
 		float y;
 		float z;
-		UvCoord (){
+		Normal (){
 
 		}
 
-		UvCoord (vector<string> &data){
+		Normal (vector<string> &data){
 			x = stof(data[0]);
 			y = stof(data[1]);
-			z = 0;
-			coord = Vec3(x, y, z);
+			z = stof(data[2]);
+			dir = Vec3(x, y, z);
 		}		
 
 	private:
@@ -36,3 +36,4 @@ class UvCoord{
 }; // end SomeClass
 
 #endif
+

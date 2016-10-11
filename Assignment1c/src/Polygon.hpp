@@ -6,6 +6,7 @@
 #include "Vertex.hpp"
 #include "Normal.hpp"
 #include "UvCoord.hpp"
+#include <algorithm>
 #include <tuple>
 #include <vector>
 #include <sstream>
@@ -36,6 +37,12 @@ class Polygon: public Object {
 			for(int i = 0; i < 3; i++){
 				vector<string> splitData;
 				string dataString = data[i];
+
+				size_t t = dataString.find("//");
+				if(t != string::npos){
+					dataString.replace(t, 2, "/ /");
+				}
+				
 				char dataCharForm[dataString.size()+1];
 				strcpy(dataCharForm, dataString.c_str());
 				char * token;
@@ -63,11 +70,10 @@ class Polygon: public Object {
 					uvs.push_back(uv[index - 1]);
 				}
 				if(splitData.size() == 3){
-					if(splitData[1] != ""){
+					if(splitData[1] != " "){
 						index = stoi(splitData[1]);
 						uvs.push_back(uv[index - 1]);
 					}
-
 					index = stoi(splitData[2]);
 					normals.push_back(norm[index - 1]);				
 				}
@@ -109,7 +115,7 @@ class Polygon: public Object {
 			float beta = areaB/area;
 			float gamma = areaC/area;
 
-			if(alpha >= 0 && alpha <= 1 && beta >= 0 && beta <= 1 && gamma >= 0 && gamma <= 1 && areaA + areaB + areaC <= area + .0001){
+			if(alpha >= 0 && alpha <= 1 && beta >= 0 && beta <= 1 && gamma >= 0 && gamma <= 1 && areaA + areaB + areaC <= area + .00001){
  				return dist;
 			}
 			else{
@@ -119,7 +125,21 @@ class Polygon: public Object {
 		}
 
 		Vec3 getNormal(Vec3 &intersect){
-			return normal;
+			if(normals.size() == 0){
+				return normal;
+			}
+
+			float areaA = ((intersect - vertices[1]->pos)*(vertices[2]->pos - vertices[1]->pos)).magnitude()/2;
+			float areaB = ((intersect - vertices[0]->pos)*(vertices[2]->pos - vertices[0]->pos)).magnitude()/2;
+			float areaC = ((intersect - vertices[0]->pos)*(vertices[1]->pos - vertices[0]->pos)).magnitude()/2;
+			
+			float alpha = areaA/area;
+			float beta = areaB/area;
+			float gamma = areaC/area;
+			Vec3 v = (alpha*normals[0]->dir + beta*normals[1]->dir + gamma*normals[2]->dir);
+			Vec3 n = v/v.magnitude();
+			n.normalize();
+			return n;
 		}
 
 

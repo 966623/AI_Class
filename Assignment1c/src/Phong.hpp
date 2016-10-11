@@ -1,6 +1,6 @@
 #ifndef Phong_HPP
 #define Phong_HPP
-
+#define _USE_MATH_DEFINES
 #include <tuple>
 #include <vector>
 #include <sstream>
@@ -41,10 +41,23 @@ class Phong {
 		            for(int i = 0; i < obj.size(); i++){
 		            	if(obj[i] != o){
 		            		float dist = obj[i]->getIntersect(intersect, L);
-			                if(distance < 0 || (dist < distance && dist >= 0)){
-			                    distance = dist;
-			                    closestObject = obj[i];
-			                }
+
+		            		//Only surfaces facing towards the point will cast a shadow
+		            		//Avoid terminator problem in smooth shading
+		            		Vec3 p = intersect + L * dist;
+		            		Vec3 n = obj[i]->getNormal(p);
+		            		Vec3 negativeL = L * -1;
+		            		if(n.dot(negativeL) >= 0){
+		            			if(distance < 0 || (dist < distance && dist >= 0)){
+		            				if(obj[i] != o){
+		            					distance = dist;
+				                    	closestObject = obj[i];
+		            				}
+				                
+				                }
+		            		}
+
+			                
 		            	}
 		                
 		            }
