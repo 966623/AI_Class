@@ -18,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/imgmaker.dir/src/Triangle.cpp.o"
   "CMakeFiles/imgmaker.dir/src/UvCoord.cpp.o"
   "CMakeFiles/imgmaker.dir/src/Normal.cpp.o"
+  "CMakeFiles/imgmaker.dir/src/Texture.cpp.o"
   "imgmaker.pdb"
   "imgmaker"
 )

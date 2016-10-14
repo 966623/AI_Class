@@ -267,6 +267,8 @@ Vec3.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
 Material.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
+Texture.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
 Entity.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Entity.hpp
 
@@ -295,12 +297,16 @@ Vec3.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
 Material.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
+Texture.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
 Light.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Light.hpp
 Object.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.hpp
 Camera.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Camera.hpp
+Polygon.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Polygon.hpp
 
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Polygon.cpp
 Polygon.hpp
@@ -321,6 +327,8 @@ Normal.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Normal.hpp
 UvCoord.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
+Texture.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
 algorithm
 -
 tuple
@@ -403,6 +411,40 @@ Vec3.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
 Light.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Light.hpp
+
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.cpp
+Texture.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
+tuple
+-
+vector
+-
+
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
+tuple
+-
+vector
+-
+sstream
+-
+math.h
+-
+algorithm
+-
+fstream
+-
+Vec3.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
+UvCoord.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
+Vertex.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Vertex.hpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
 
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Triangle.cpp
 Triangle.hpp
@@ -545,6 +587,8 @@ Sphere.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Sphere.hpp
 Material.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
+Texture.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
 Ellipsoid.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1c/src/Ellipsoid.hpp
 Phong.hpp

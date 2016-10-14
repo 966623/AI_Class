@@ -501,6 +501,33 @@ src/Spotlight.cpp.s:
 	$(MAKE) -f CMakeFiles/imgmaker.dir/build.make CMakeFiles/imgmaker.dir/src/Spotlight.cpp.s
 .PHONY : src/Spotlight.cpp.s
 
+src/Texture.o: src/Texture.cpp.o
+
+.PHONY : src/Texture.o
+
+# target to build an object file
+src/Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/imgmaker.dir/build.make CMakeFiles/imgmaker.dir/src/Texture.cpp.o
+.PHONY : src/Texture.cpp.o
+
+src/Texture.i: src/Texture.cpp.i
+
+.PHONY : src/Texture.i
+
+# target to preprocess a source file
+src/Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/imgmaker.dir/build.make CMakeFiles/imgmaker.dir/src/Texture.cpp.i
+.PHONY : src/Texture.cpp.i
+
+src/Texture.s: src/Texture.cpp.s
+
+.PHONY : src/Texture.s
+
+# target to generate assembly for a file
+src/Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/imgmaker.dir/build.make CMakeFiles/imgmaker.dir/src/Texture.cpp.s
+.PHONY : src/Texture.cpp.s
+
 src/Triangle.o: src/Triangle.cpp.o
 
 .PHONY : src/Triangle.o
@@ -687,6 +714,9 @@ help:
 	@echo "... src/Spotlight.o"
 	@echo "... src/Spotlight.i"
 	@echo "... src/Spotlight.s"
+	@echo "... src/Texture.o"
+	@echo "... src/Texture.i"
+	@echo "... src/Texture.s"
 	@echo "... src/Triangle.o"
 	@echo "... src/Triangle.i"
 	@echo "... src/Triangle.s"

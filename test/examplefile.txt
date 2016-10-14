@@ -1,4 +1,0 @@
-# a comment starts with pound
-aVector -10.0 16.4
-aFloat		-99999
-aString  hello!

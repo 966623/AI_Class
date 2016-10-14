@@ -18,7 +18,10 @@ CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Entity.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vertex.hpp
 CMakeFiles/imgmaker.dir/src/Entity.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Entity.cpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Entity.hpp
@@ -41,7 +44,10 @@ CMakeFiles/imgmaker.dir/src/Material.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Sphere.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vertex.hpp
 CMakeFiles/imgmaker.dir/src/Normal.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Normal.cpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Normal.hpp
@@ -51,16 +57,24 @@ CMakeFiles/imgmaker.dir/src/Object.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.cpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vertex.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Camera.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Entity.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Light.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Normal.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Phong.cpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Phong.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Polygon.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vertex.hpp
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Entity.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
@@ -68,6 +82,7 @@ CMakeFiles/imgmaker.dir/src/Polygon.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Polygon.cpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Polygon.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vertex.hpp
@@ -77,19 +92,30 @@ CMakeFiles/imgmaker.dir/src/Sphere.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Sphere.cpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Sphere.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vertex.hpp
 CMakeFiles/imgmaker.dir/src/Spotlight.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Entity.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Light.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Spotlight.cpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Spotlight.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
+CMakeFiles/imgmaker.dir/src/Texture.cpp.o
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.cpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vertex.hpp
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Entity.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Material.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Normal.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Object.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Polygon.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Triangle.cpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Triangle.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
@@ -122,6 +148,7 @@ CMakeFiles/imgmaker.dir/src/main.cpp.o
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Polygon.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Sphere.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Spotlight.hpp
+ /Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Triangle.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.hpp
  /Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.hpp

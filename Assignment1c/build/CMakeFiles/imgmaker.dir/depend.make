@@ -17,7 +17,10 @@ CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o: ../src/Ellipsoid.hpp
 CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o: ../src/Entity.hpp
 CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o: ../src/Material.hpp
 CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o: ../src/Object.hpp
+CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o: ../src/Texture.hpp
+CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o: ../src/UvCoord.hpp
 CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o: ../src/Vec3.hpp
+CMakeFiles/imgmaker.dir/src/Ellipsoid.cpp.o: ../src/Vertex.hpp
 
 CMakeFiles/imgmaker.dir/src/Entity.cpp.o: ../src/Entity.cpp
 CMakeFiles/imgmaker.dir/src/Entity.cpp.o: ../src/Entity.hpp
@@ -40,7 +43,10 @@ CMakeFiles/imgmaker.dir/src/Material.cpp.o: ../src/Material.cpp
 CMakeFiles/imgmaker.dir/src/Material.cpp.o: ../src/Material.hpp
 CMakeFiles/imgmaker.dir/src/Material.cpp.o: ../src/Object.hpp
 CMakeFiles/imgmaker.dir/src/Material.cpp.o: ../src/Sphere.hpp
+CMakeFiles/imgmaker.dir/src/Material.cpp.o: ../src/Texture.hpp
+CMakeFiles/imgmaker.dir/src/Material.cpp.o: ../src/UvCoord.hpp
 CMakeFiles/imgmaker.dir/src/Material.cpp.o: ../src/Vec3.hpp
+CMakeFiles/imgmaker.dir/src/Material.cpp.o: ../src/Vertex.hpp
 
 CMakeFiles/imgmaker.dir/src/Normal.cpp.o: ../src/Normal.cpp
 CMakeFiles/imgmaker.dir/src/Normal.cpp.o: ../src/Normal.hpp
@@ -50,16 +56,24 @@ CMakeFiles/imgmaker.dir/src/Object.cpp.o: ../src/Entity.hpp
 CMakeFiles/imgmaker.dir/src/Object.cpp.o: ../src/Material.hpp
 CMakeFiles/imgmaker.dir/src/Object.cpp.o: ../src/Object.cpp
 CMakeFiles/imgmaker.dir/src/Object.cpp.o: ../src/Object.hpp
+CMakeFiles/imgmaker.dir/src/Object.cpp.o: ../src/Texture.hpp
+CMakeFiles/imgmaker.dir/src/Object.cpp.o: ../src/UvCoord.hpp
 CMakeFiles/imgmaker.dir/src/Object.cpp.o: ../src/Vec3.hpp
+CMakeFiles/imgmaker.dir/src/Object.cpp.o: ../src/Vertex.hpp
 
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Camera.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Entity.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Light.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Material.hpp
+CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Normal.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Object.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Phong.cpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Phong.hpp
+CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Polygon.hpp
+CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Texture.hpp
+CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/UvCoord.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Vec3.hpp
+CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Vertex.hpp
 
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Entity.hpp
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Material.hpp
@@ -67,6 +81,7 @@ CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Normal.hpp
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Object.hpp
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Polygon.cpp
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Polygon.hpp
+CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Texture.hpp
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/UvCoord.hpp
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Vec3.hpp
 CMakeFiles/imgmaker.dir/src/Polygon.cpp.o: ../src/Vertex.hpp
@@ -76,7 +91,10 @@ CMakeFiles/imgmaker.dir/src/Sphere.cpp.o: ../src/Material.hpp
 CMakeFiles/imgmaker.dir/src/Sphere.cpp.o: ../src/Object.hpp
 CMakeFiles/imgmaker.dir/src/Sphere.cpp.o: ../src/Sphere.cpp
 CMakeFiles/imgmaker.dir/src/Sphere.cpp.o: ../src/Sphere.hpp
+CMakeFiles/imgmaker.dir/src/Sphere.cpp.o: ../src/Texture.hpp
+CMakeFiles/imgmaker.dir/src/Sphere.cpp.o: ../src/UvCoord.hpp
 CMakeFiles/imgmaker.dir/src/Sphere.cpp.o: ../src/Vec3.hpp
+CMakeFiles/imgmaker.dir/src/Sphere.cpp.o: ../src/Vertex.hpp
 
 CMakeFiles/imgmaker.dir/src/Spotlight.cpp.o: ../src/Entity.hpp
 CMakeFiles/imgmaker.dir/src/Spotlight.cpp.o: ../src/Light.hpp
@@ -84,11 +102,19 @@ CMakeFiles/imgmaker.dir/src/Spotlight.cpp.o: ../src/Spotlight.cpp
 CMakeFiles/imgmaker.dir/src/Spotlight.cpp.o: ../src/Spotlight.hpp
 CMakeFiles/imgmaker.dir/src/Spotlight.cpp.o: ../src/Vec3.hpp
 
+CMakeFiles/imgmaker.dir/src/Texture.cpp.o: ../src/Material.hpp
+CMakeFiles/imgmaker.dir/src/Texture.cpp.o: ../src/Texture.cpp
+CMakeFiles/imgmaker.dir/src/Texture.cpp.o: ../src/Texture.hpp
+CMakeFiles/imgmaker.dir/src/Texture.cpp.o: ../src/UvCoord.hpp
+CMakeFiles/imgmaker.dir/src/Texture.cpp.o: ../src/Vec3.hpp
+CMakeFiles/imgmaker.dir/src/Texture.cpp.o: ../src/Vertex.hpp
+
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/Entity.hpp
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/Material.hpp
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/Normal.hpp
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/Object.hpp
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/Polygon.hpp
+CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/Texture.hpp
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/Triangle.cpp
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/Triangle.hpp
 CMakeFiles/imgmaker.dir/src/Triangle.cpp.o: ../src/UvCoord.hpp
@@ -121,6 +147,7 @@ CMakeFiles/imgmaker.dir/src/main.cpp.o: ../src/Phong.hpp
 CMakeFiles/imgmaker.dir/src/main.cpp.o: ../src/Polygon.hpp
 CMakeFiles/imgmaker.dir/src/main.cpp.o: ../src/Sphere.hpp
 CMakeFiles/imgmaker.dir/src/main.cpp.o: ../src/Spotlight.hpp
+CMakeFiles/imgmaker.dir/src/main.cpp.o: ../src/Texture.hpp
 CMakeFiles/imgmaker.dir/src/main.cpp.o: ../src/Triangle.hpp
 CMakeFiles/imgmaker.dir/src/main.cpp.o: ../src/UvCoord.hpp
 CMakeFiles/imgmaker.dir/src/main.cpp.o: ../src/Vec3.hpp

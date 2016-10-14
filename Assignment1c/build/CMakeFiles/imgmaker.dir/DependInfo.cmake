@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/Sean/Documents/CSCI5607/Assignment1c/src/Polygon.cpp" "/Users/Sean/Documents/CSCI5607/Assignment1c/build/CMakeFiles/imgmaker.dir/src/Polygon.cpp.o"
   "/Users/Sean/Documents/CSCI5607/Assignment1c/src/Sphere.cpp" "/Users/Sean/Documents/CSCI5607/Assignment1c/build/CMakeFiles/imgmaker.dir/src/Sphere.cpp.o"
   "/Users/Sean/Documents/CSCI5607/Assignment1c/src/Spotlight.cpp" "/Users/Sean/Documents/CSCI5607/Assignment1c/build/CMakeFiles/imgmaker.dir/src/Spotlight.cpp.o"
+  "/Users/Sean/Documents/CSCI5607/Assignment1c/src/Texture.cpp" "/Users/Sean/Documents/CSCI5607/Assignment1c/build/CMakeFiles/imgmaker.dir/src/Texture.cpp.o"
   "/Users/Sean/Documents/CSCI5607/Assignment1c/src/Triangle.cpp" "/Users/Sean/Documents/CSCI5607/Assignment1c/build/CMakeFiles/imgmaker.dir/src/Triangle.cpp.o"
   "/Users/Sean/Documents/CSCI5607/Assignment1c/src/UvCoord.cpp" "/Users/Sean/Documents/CSCI5607/Assignment1c/build/CMakeFiles/imgmaker.dir/src/UvCoord.cpp.o"
   "/Users/Sean/Documents/CSCI5607/Assignment1c/src/Vec3.cpp" "/Users/Sean/Documents/CSCI5607/Assignment1c/build/CMakeFiles/imgmaker.dir/src/Vec3.cpp.o"
