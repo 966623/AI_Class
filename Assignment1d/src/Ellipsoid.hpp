@@ -33,7 +33,7 @@ class Ellipsoid: public Object {
             
 			pos = Vec3(stof(data[0]), stof(data[1]), stof(data[2]));
 			radius = Vec3(stof(data[3]), stof(data[4]), stof(data[5]));
-			size = radius;
+			size = radius*2;
 			material = m;
 		}		
 

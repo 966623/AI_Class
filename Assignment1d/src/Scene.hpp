@@ -52,9 +52,10 @@ class Scene{
 		        cout << "ERROR: No objects to render\n";
 		        exit(EXIT_FAILURE);
 		    }
-
+		    cout << "Creating bounding box tree\n";
+		    makeSceneTree();
 		    Phong phongRender = Phong();
-
+		    cout << "Rendering pixels\n";
 		    // Calculate pixels
 		    for(int y = 0; y < img.height; y++){
 		        for(int x = 0; x < img.width; x++){
@@ -65,22 +66,16 @@ class Scene{
 
 		            float distance = -1;
 		            Object* closestObject = objects[0];
-		            // Check intersection with every object
-		            for(int i = 0; i < objects.size(); i++){
-		                float newDist = objects[i]->getIntersect(renderRay);
-		                if(distance < 0 || (newDist < distance && newDist >= 0)){
-		                    distance = newDist;
-		                    closestObject = objects[i];
-		                }
-		            }
 		            
+		            distance = sceneTree.getIntersect(renderRay);
+		         	closestObject = renderRay.hit;
 		            // Choose nearest intersection and write color to image. If no intersection write background color
 		            if (distance < 0){
 		                img.set(x, y, img.bkg);
 		            }
 		            else{
 		                Vec3 intersect = renderRay.pos + (distance*renderRay.dir);
-		                img.set(x, y, phongRender.calc(intersect, &cam, closestObject, lights, objects));
+		                img.set(x, y, phongRender.calc(intersect, &cam, closestObject, lights, objects, sceneTree));
 		            }
 		        }
 		    }
@@ -90,7 +85,7 @@ class Scene{
     		cout << "Image successfully created\n";
 		}
 
-		void makeKDTree(){
+		void makeSceneTree(){
 			sceneTree = SceneTree(objects);
 		}
 

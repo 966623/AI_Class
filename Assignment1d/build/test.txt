@@ -1,0 +1,18 @@
+eye 0 0 5
+imsize 64 48
+updir	0 100 0
+viewdir 0 0 -5
+fovv  50
+# parallel
+bkgcolor 1 0 0
+
+
+# POINT
+light 0 4 4 1 1 1 1
+
+
+
+mtlcolor 1 1 0 1 1 1 .2 1 .4 100
+texture map.ppm
+sphere 0 0 0 .9
+sphere 0 .5 1 .9

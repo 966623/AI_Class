@@ -75,6 +75,7 @@ CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Phong.cpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Phong.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Polygon.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Ray.hpp
+CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/SceneTree.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Texture.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/UvCoord.hpp
 CMakeFiles/imgmaker.dir/src/Phong.cpp.o: ../src/Vec3.hpp

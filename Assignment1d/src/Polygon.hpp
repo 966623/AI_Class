@@ -130,9 +130,11 @@ class Polygon: public Object {
 				for(int j = 1; j < vertexCount; j++){
 					if (vertices[j]->pos[i] < min){
 						minVert = vertices[j];
+						min = vertices[j]->pos[i];
 					}
 					if (vertices[j]->pos[i] > max){
 						maxVert = vertices[j];
+						max = vertices[j]->pos[i];
 					}
 				}
 
@@ -202,7 +204,6 @@ class Polygon: public Object {
 		}
 
 		Vec3 getColor(Vec3 &p){
-
 			if(textured){
 				float area = ((vertices[1]->pos - vertices[0]->pos)*(vertices[2]->pos - vertices[0]->pos)).magnitude()/2;
 				float areaA = ((p - vertices[1]->pos)*(vertices[2]->pos - vertices[1]->pos)).magnitude()/2;

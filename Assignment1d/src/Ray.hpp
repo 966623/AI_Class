@@ -9,6 +9,7 @@
 #include "Vec3.hpp"
 
 using namespace std;
+class Object;
 
 class Ray {
 	public:
@@ -17,6 +18,7 @@ class Ray {
 		Vec3 dir;
 		Vec3 color;
 		float distance;
+		Object* hit;
 		Ray (){
 
 		}

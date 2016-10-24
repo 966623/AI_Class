@@ -315,6 +315,8 @@ Polygon.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1d/src/Polygon.hpp
 Ray.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1d/src/Ray.hpp
+SceneTree.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1d/src/SceneTree.hpp
 
 /Users/Sean/Documents/CSCI5607/Assignment1d/src/Polygon.cpp
 Polygon.hpp
@@ -471,12 +473,16 @@ stdlib.h
 -
 iostream
 -
+limits
+-
 Vec3.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1d/src/Vec3.hpp
 Material.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1d/src/Material.hpp
 Object.hpp
 /Users/Sean/Documents/CSCI5607/Assignment1d/src/Object.hpp
+Ray.hpp
+/Users/Sean/Documents/CSCI5607/Assignment1d/src/Ray.hpp
 
 /Users/Sean/Documents/CSCI5607/Assignment1d/src/Sphere.cpp
 Sphere.hpp

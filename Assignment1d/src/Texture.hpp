@@ -115,17 +115,18 @@ class Texture {
 			if(newCoord.y < 0){
 				newCoord.y = 0;
 			}
-
 			float x = newCoord.x*(width-1);
 			float y = newCoord.y*(height-1);
 			int i = floor(x);
 			int j = floor(y);
 			float a = x - i;
 			float b = y - j;
+
 			Vec3 color = (1 - a) * (1 - b) * pixels[j][i] + 
 				(a) * (1 - b) * pixels[j][i+1] + 
 				(1 - a) * (b) * pixels[j+1][i] + 
 				(a) * (b) * pixels[j+1][i+1];
+
 			return color;
 		}
 

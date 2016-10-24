@@ -280,7 +280,6 @@ void makeImage(ImgSettings settings){
     // instantiate objects
     Scene scene;
     makeObjects(settings, scene.cam, scene.img, scene.objects, scene.vertices, scene.normals, scene.uvs, scene.polygons, scene.materials, scene.textures, scene.lights);
-    scene.makeKDTree();
     // Write image size to file
     outputFile << scene.img.width << " " << scene.img.height << "\n";
 

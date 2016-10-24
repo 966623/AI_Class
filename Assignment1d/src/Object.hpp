@@ -51,6 +51,7 @@ class Object: public Entity {
 		}
 
 		virtual Vec3 getColor(Vec3 &p){
+			cout << "NEED TO IMPLEMENT getcolor\n";
 			Vec3 i = Vec3(0,0,0);
 			return i; 
 		}

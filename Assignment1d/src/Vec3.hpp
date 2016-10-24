@@ -13,7 +13,7 @@ class Vec3 {
 	public:
 
 		Vec3 (){
-
+			x = y = z = 0;
 		}
 
 		Vec3 (float newX, float newY, float newZ){

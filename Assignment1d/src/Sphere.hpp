@@ -35,7 +35,7 @@ class Sphere: public Object {
 
 			pos = Vec3(stof(data[0]), stof(data[1]), stof(data[2]));
 			radius = stof(data[3]);
-			size = Vec3(radius, radius, radius);
+			size = Vec3(radius*2, radius*2, radius*2);
 			material = m;
 		}		
 
@@ -50,6 +50,8 @@ class Sphere: public Object {
 			if(det == 0){
 				return -B/(2.0*A);
 			}
+
+			//get closest intersection
 			else if(det > 0){
 				float sol1 = (-B + sqrt(det))/(2.0*A);
 				float sol2 = (-B - sqrt(det))/(2.0*A);
@@ -67,6 +69,7 @@ class Sphere: public Object {
 
 		Vec3 getColor(Vec3 &p){
 			if(textured){
+
 				float nx = (p.x - pos.x)/radius;
 				float ny = (p.y - pos.y)/radius;
 				float nz = (p.z - pos.z)/radius;

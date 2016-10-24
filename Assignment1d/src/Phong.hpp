@@ -15,6 +15,7 @@
 #include "Camera.hpp"
 #include "Polygon.hpp"
 #include "Ray.hpp"
+#include "SceneTree.hpp"
 
 
 using namespace std;
@@ -25,12 +26,16 @@ class Phong {
 
 		}
 
-		Vec3 calc(Vec3 &intersect, Camera *c, Object *o, vector<Light*> &l, vector<Object*> &obj){
+		Vec3 calc(Vec3 &intersect, Camera *c, Object *o, vector<Light*> &l, vector<Object*> &obj, SceneTree &tree){
 			Material* mat = o->material;
 			Texture* tex = o->texture;
+
 			Vec3 color;
 			color = o->getColor(intersect);
+
 			Vec3 N = o->getNormal(intersect);  //Normal
+
+
 			Vec3 V = (c->pos - intersect).normalized(); //View direction
 
 			color = (mat->ka * color); //Ambient
@@ -48,6 +53,7 @@ class Phong {
 				if(L.magnitude() > 0){
 					//Check shadow
 		            // Check intersection with every object
+		            /*
 		            for(int i = 0; i < obj.size(); i++){
 		            	if(obj[i] != o){
 		            		float dist = obj[i]->getIntersect(lightRay);
@@ -70,7 +76,8 @@ class Phong {
 			                
 		            	}
 		                
-		            }
+		            }*/
+
 				}
 				
 
