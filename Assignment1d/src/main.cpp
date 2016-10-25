@@ -155,7 +155,7 @@ int makeObjects(ImgSettings& settings, Camera &c, Image &i,
     cout << "Setting up objects...\n";
 
     // find first material
-    cout << "Making Material\n";
+    cout << "\rMaking Material";
     settings.seekStart();
     settings.seek("mtlcolor");
     int mtlIndex = 0;
@@ -169,20 +169,20 @@ int makeObjects(ImgSettings& settings, Camera &c, Image &i,
     while(get<0>(line = settings.next()) != "eof"){
         string name = get<0>(line);
         if(name == "mtlcolor"){ // Set new material if new material found
-            cout << "Making Material\n";
+            cout << "\rMaking Material";
             mtlIndex++;
             mtlData = get<1>(settings.getCurrent());
             newMaterial = new Material(mtlData);
             mtl.push_back(newMaterial);
         }
         else if(name == "texture"){
-            cout << "Making Texture\n";
+            cout << "\rMaking Texture";
             texIndex++;
             Texture *newTex = new Texture(get<1>(line));
             tex.push_back(newTex);
         }
         else if(name == "sphere"){ // Set up new sphere if sphere found
-            cout << "Making Sphere\n";
+            cout << "\rMaking Sphere";
             Sphere *newSphere = new Sphere(get<1>(line), newMaterial);
             if(texIndex >= 0){
                 newSphere->setTexture(tex[texIndex]);
@@ -190,7 +190,7 @@ int makeObjects(ImgSettings& settings, Camera &c, Image &i,
             obj.push_back(newSphere);
         }
         else if(name == "ellipsoid"){ // Set up new ellipsoid if ellipsoid found
-            cout << "Making Ellipsoid\n";
+            cout << "\rMaking Ellipsoid";
             Ellipsoid *newEllipsoid = new Ellipsoid(get<1>(line), newMaterial);
             if(texIndex >= 0){
                 newEllipsoid->setTexture(tex[texIndex]);
@@ -198,25 +198,25 @@ int makeObjects(ImgSettings& settings, Camera &c, Image &i,
             obj.push_back(newEllipsoid);
         }
         else if(name == "v"){
-            cout << "Making Vertex\n";
+            cout << "\rMaking Vertex";
             vector<string> vertData = get<1>(settings.getCurrent());
             Vertex* newVert = new Vertex(vertData);
             vert.push_back(newVert);
         }
         else if(name == "vn"){
-            cout << "Making Vertex Normal\n";
+            cout << "\rMaking Vertex Normal";
             vector<string> normData = get<1>(settings.getCurrent());
             Normal* newNorm = new Normal(normData);
             norm.push_back(newNorm);
         }
         else if(name == "vt"){
-            cout << "Making UV Coordinate\n";
+            cout << "\rMaking UV Coordinate";
             vector<string> uvData = get<1>(settings.getCurrent());
             UvCoord* newUv = new UvCoord(uvData);
             uvs.push_back(newUv);
         }
         else if(name == "f"){
-            cout << "Making Polygon\n";
+            cout << "\rMaking Polygon";
             vector<string> polyData = get<1>(settings.getCurrent());
             Polygon* newPoly = new Polygon(polyData, vert, norm, uvs, mtl[mtlIndex]);
             if(texIndex >= 0){
@@ -228,31 +228,21 @@ int makeObjects(ImgSettings& settings, Camera &c, Image &i,
     }
     // --------------
 
-    //Vertices ----------
-    cout << "Making Polygons\n";
-    settings.seekStart();
-
-    while(get<0>(line = settings.next()) != "eof"){
-        string name = get<0>(line);
-        
-    }
-    // ----------------
-
     //Lights ----------
-    cout << "Making Lights\n";
+    cout << "\nMaking Lights\n";
     settings.seekStart();
 
     while(get<0>(line = settings.next()) != "eof"){
         string name = get<0>(line);
         if(name == "light"){
-            cout << "Making Point/Directional Light\n";
+            cout << "\rMaking Point/Directional Light";
             vector<string> ltData = get<1>(settings.getCurrent());
             Light* newLight = new Basiclight(ltData);
             lt.push_back(newLight);
         }
 
         else if(name == "spotlight"){
-            cout << "Making Spotlight\n";
+            cout << "\rMaking Spotlight";
             vector<string> ltData = get<1>(settings.getCurrent());
             Light* newLight = new Spotlight(ltData);
             lt.push_back(newLight);

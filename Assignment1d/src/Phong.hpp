@@ -26,15 +26,12 @@ class Phong {
 
 		}
 
-		Vec3 calc(Vec3 &intersect, Camera *c, Object *o, vector<Light*> &l, vector<Object*> &obj, SceneTree &tree){
+		Vec3 calc(Vec3 &intersect, Camera *c, Object *o, vector<Light*> &l, SceneTree &tree){
 			Material* mat = o->material;
 			Texture* tex = o->texture;
-
 			Vec3 color;
 			color = o->getColor(intersect);
-
 			Vec3 N = o->getNormal(intersect);  //Normal
-
 
 			Vec3 V = (c->pos - intersect).normalized(); //View direction
 
@@ -46,42 +43,14 @@ class Phong {
 				Light* currentLight = l[i];
 				Vec3 L = currentLight->getDir(intersect); // Light direciton
 	            float distance = -1;
-	            Object* closestObject = obj[0];
 
 	            Ray lightRay = Ray(intersect, L);
 				//If light touches point
 				if(L.magnitude() > 0){
-					//Check shadow
-		            // Check intersection with every object
-		            /*
-		            for(int i = 0; i < obj.size(); i++){
-		            	if(obj[i] != o){
-		            		float dist = obj[i]->getIntersect(lightRay);
-
-		            		//Only surfaces facing towards the point will cast a shadow
-		            		//Avoid terminator problem in smooth shading
-		            		Vec3 p = intersect + L * dist;
-		            		Vec3 n = obj[i]->getNormal(p);
-		            		Vec3 negativeL = L * -1;
-		            		if(n.dot(negativeL) >= 0){
-		            			if(distance < 0 || (dist < distance && dist >= 0)){
-		            				if(obj[i] != o){
-		            					distance = dist;
-				                    	closestObject = obj[i];
-		            				}
-				                
-				                }
-		            		}
-
-			                
-		            	}
-		                
-		            }*/
-
+		            distance = tree.getIntersect(lightRay);
 				}
-				
 
-	            if(distance <= 0.0001){
+	            if(distance <= 0.00001){
 	            	//No shadow
 	            	S = 1;
 	            }

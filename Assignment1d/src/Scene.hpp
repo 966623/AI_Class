@@ -47,7 +47,7 @@ class Scene{
 
 	    void render(ofstream &file){
 
-		    cout << "Rendering...\n";
+		    cout << "\nRendering...\n";
 		    if(objects.size() == 0){
 		        cout << "ERROR: No objects to render\n";
 		        exit(EXIT_FAILURE);
@@ -59,7 +59,7 @@ class Scene{
 		    // Calculate pixels
 		    for(int y = 0; y < img.height; y++){
 		        for(int x = 0; x < img.width; x++){
-		            
+		            cout << "\rPixel: " << x << " " << y;
 		            //Define ray
 
 		            Ray renderRay = cam.getPixelRay(img.width, img.height, x, y);
@@ -75,14 +75,15 @@ class Scene{
 		            }
 		            else{
 		                Vec3 intersect = renderRay.pos + (distance*renderRay.dir);
-		                img.set(x, y, phongRender.calc(intersect, &cam, closestObject, lights, objects, sceneTree));
+		                
+		                img.set(x, y, phongRender.calc(intersect, &cam, closestObject, lights, sceneTree));
 		            }
 		        }
 		    }
 
 		    img.write(file);
 		    file.close();
-    		cout << "Image successfully created\n";
+    		cout << "\nImage successfully created\n";
 		}
 
 		void makeSceneTree(){

@@ -61,35 +61,48 @@ class SceneTree{
 				cout << "Trees: " << finalSceneTree.size() << "\n";
 				//pair up all nodes
 				tempSceneTree.resize(0);
-				while(finalSceneTree.size() > 0){
-
+				int numRemaining = finalSceneTree.size();
+				int pairIndex = 0;
+				while(numRemaining > 0){
 					//get first node
-					SceneTree* first = finalSceneTree[0];
-					finalSceneTree = erase(finalSceneTree, 0);
-					//Setup new node
-					SceneTree* newTree = new SceneTree();
-					newTree->leftChild = first;
-					//If something exists to pair with
+					SceneTree* first = finalSceneTree[pairIndex];
+					if(finalSceneTree[pairIndex] == NULL){
+						pairIndex++;
+					}
+					else{
 
-					if(finalSceneTree.size() > 0){
-						//find leaf closest to it
-						float minDist = (first->center - finalSceneTree[0]->center).magnitude();
-						int closest = 0;
-						for(int i = 0; i < finalSceneTree.size(); i++){
-							float dist = (first->center - finalSceneTree[i]->center).magnitude();
-							if(dist < minDist){
-								minDist = dist;
-								closest = i;
+						finalSceneTree[pairIndex] = (SceneTree*)NULL;
+						numRemaining--;
+						//Setup new node
+						SceneTree* newTree = new SceneTree();
+						newTree->leftChild = first;
+
+						pairIndex++;
+						//If something exists to pair with
+						if(numRemaining > 0){
+							//find leaf closest to it
+							float minDist = numeric_limits<float>::infinity();
+							int closest = 0;
+							for(int i = pairIndex; i < finalSceneTree.size(); i++){
+								if(finalSceneTree[i] != NULL){
+									float dist = (first->center - finalSceneTree[i]->center).magnitude();
+									if(dist < minDist){
+										minDist = dist;
+										closest = i;
+									}
+								}
+								
 							}
+							//set closest to right child and remove from node list
+							newTree->rightChild = finalSceneTree[closest];
+							finalSceneTree[closest] = (SceneTree*)NULL;
+							numRemaining--;
+							
 						}
-						//set closest to right child and remove from node list
-						newTree->rightChild = finalSceneTree[closest];
-						finalSceneTree = erase(finalSceneTree, closest);
-						
+						newTree->setBounds();
+						tempSceneTree.push_back(newTree);
 					}
 					
-					newTree->setBounds();
-					tempSceneTree.push_back(newTree);
 					
 				}
 				finalSceneTree = tempSceneTree;
@@ -148,9 +161,9 @@ class SceneTree{
 			float z2 = (far.z - ray.pos.z)/ray.dir.z;
 			minDist = max(minDist, min(z1, z2));
 			maxDist = min(maxDist, max(z1, z2));
-			
+
 			//If intersect box, check if ray intersects contents
-			if(maxDist >= minDist){
+			if(maxDist >= minDist || (ray.pos.x >= lowerCorner.x && ray.pos.y >= lowerCorner.y && ray.pos.z >= lowerCorner.z && ray.pos.x <= upperCorner.x && ray.pos.y <= upperCorner.y && ray.pos.z <= upperCorner.z)  ){
 				float newdist = -1;
 				Object* obj;
 				ray.distance = -1;
@@ -171,16 +184,16 @@ class SceneTree{
 					}
 
 
-					if(get<0>(l) == -1 && get<0>(r) != -1){
+					if(get<0>(l) < .0001 && get<0>(r) > .0001){
 						newdist = get<0>(r);
 						obj = get<1>(r);
 					}
-					else if(get<0>(l) != -1 && get<0>(r) == -1){
+					else if(get<0>(l) > .0001&& get<0>(r) < .0001){
 						newdist = get<0>(l);
 						obj = get<1>(l);
 					}
 
-					else if(get<0>(l) != -1 && get<0>(r) != -1){
+					else if(get<0>(l) > .0001 && get<0>(r) > .0001){
 						if(get<0>(l) < get<0>(r)){
 							newdist = get<0>(l);
 							obj = get<1>(l);

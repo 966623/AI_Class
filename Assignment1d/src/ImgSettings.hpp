@@ -88,13 +88,14 @@ class ImgSettings {
 
 		string to_str(){
 			stringstream ss;
+			ss << "\n";
 			for(int i = 0; i < data.size(); i++){
 				ss << get<0>(data[i]) << " : ";
 				vector<string> d = get<1>(data[i]);
 				for(int j = 0; j < d.size(); j++){
 					ss << d[j] << " ";
 				}
-				ss << "\n";
+				ss << "\r";
 			}
 			return ss.str();
 		}

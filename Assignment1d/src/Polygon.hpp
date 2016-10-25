@@ -176,7 +176,7 @@ class Polygon: public Object {
 			float beta = areaB/area;
 			float gamma = areaC/area;
 
-			if(alpha >= 0 && alpha <= 1 && beta >= 0 && beta <= 1 && gamma >= 0 && gamma <= 1 && areaA + areaB + areaC <= area + .00001){
+			if(alpha >= 0 && alpha <= 1 && beta >= 0 && beta <= 1 && gamma >= 0 && gamma <= 1 && areaA + areaB + areaC <= area + .0000001){
  				return dist;
 			}
 			else{
@@ -209,7 +209,6 @@ class Polygon: public Object {
 				float areaA = ((p - vertices[1]->pos)*(vertices[2]->pos - vertices[1]->pos)).magnitude()/2;
 				float areaB = ((p - vertices[0]->pos)*(vertices[2]->pos - vertices[0]->pos)).magnitude()/2;
 				float areaC = ((p - vertices[0]->pos)*(vertices[1]->pos - vertices[0]->pos)).magnitude()/2;
-				
 				float alpha = areaA/area;
 				float beta = areaB/area;
 				float gamma = areaC/area;
