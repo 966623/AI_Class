@@ -1,5 +1,6 @@
 #ifndef SceneTree_HPP
 #define SceneTree_HPP
+#define _USE_MATH_DEFINES
 
 #include <tuple>
 #include <vector>
@@ -172,8 +173,14 @@ class SceneTree{
 				tuple<float, Object*>  r = make_tuple(-1, (Object*)0);
 				
 				if(data != NULL){
-					newdist = data->getIntersect(ray);
-					obj = data;	
+					float dataI = data->getIntersect(ray);
+					Vec3 dataIV = ray.pos + ray.dir * dataI;
+					Vec3 dataNormal = data->getNormal(dataIV);
+					if( ray.dir.angle(dataNormal) > M_PI/2.0){
+						newdist = dataI;
+						obj = data;	
+					}
+					
 				}
 				else{					
 					if(leftChild != NULL){
@@ -184,16 +191,16 @@ class SceneTree{
 					}
 
 
-					if(get<0>(l) < .0001 && get<0>(r) > .0001){
+					if(get<0>(l) < .000001 && get<0>(r) > .000001){
 						newdist = get<0>(r);
 						obj = get<1>(r);
 					}
-					else if(get<0>(l) > .0001&& get<0>(r) < .0001){
+					else if(get<0>(l) > .000001&& get<0>(r) < .000001){
 						newdist = get<0>(l);
 						obj = get<1>(l);
 					}
 
-					else if(get<0>(l) > .0001 && get<0>(r) > .0001){
+					else if(get<0>(l) > .000001 && get<0>(r) > .000001){
 						if(get<0>(l) < get<0>(r)){
 							newdist = get<0>(l);
 							obj = get<1>(l);

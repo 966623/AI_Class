@@ -8,11 +8,11 @@ bkgcolor .1 .1 .2
 
 
 # POINT
-light 0 -4 -4 0 1 1 1
+light 0 4 4 1 1 1 1
 
 
 
-mtlcolor 1 1 0 1 1 1 .5 1 .4 100
+mtlcolor 1 1 0 1 1 1 .5 1 .4 100 1 .5
 texture pumpkin_tex.ppm
 
 v 0.707107 2.000000 -0.707107

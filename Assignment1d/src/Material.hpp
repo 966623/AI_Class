@@ -22,13 +22,15 @@ class Material{
 		float kd;
 		float ks;
 		float n;
+		float opacity;
+		float refrac;
 
 		Material (){
 
 		}
 
 		Material (vector<string> &data){
-			if(data.size() != 10){
+			if(data.size() != 12){
 		        cout << "ERROR: INVALID MATERIAL\n";
 		        exit(EXIT_FAILURE);
 		    }
@@ -39,6 +41,8 @@ class Material{
 			kd = stof(data[7]);
 			ks = stof(data[8]);
 			n = stof(data[9]);
+			opacity = stof(data[10]);
+			refrac = stof(data[11]);
 		}		
 
 	private:

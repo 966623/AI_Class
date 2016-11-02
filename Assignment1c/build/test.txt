@@ -1,0 +1,18 @@
+eye 0 0 5
+imsize 640 480
+updir	0 100 0
+viewdir 0 0 -5
+fovv  50
+# parallel
+bkgcolor .5 .5 .8
+
+
+# POINT
+light 4 4 4 1 1 1 1
+
+
+
+mtlcolor 1 0 0 1 1 1 .5 1 .4 100 
+sphere 0 0 0 .9
+mtlcolor .5 .5 .5 1 1 1 .5 1 .4 100 
+sphere 2 0 0 .9

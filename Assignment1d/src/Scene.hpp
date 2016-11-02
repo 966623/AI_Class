@@ -59,7 +59,7 @@ class Scene{
 		    // Calculate pixels
 		    for(int y = 0; y < img.height; y++){
 		        for(int x = 0; x < img.width; x++){
-		            cout << "\rPixel: " << x << " " << y;
+		            cout << "\rPixel: " << x << "    " << y << "    ";
 		            //Define ray
 
 		            Ray renderRay = cam.getPixelRay(img.width, img.height, x, y);
@@ -76,7 +76,7 @@ class Scene{
 		            else{
 		                Vec3 intersect = renderRay.pos + (distance*renderRay.dir);
 		                
-		                img.set(x, y, phongRender.calc(intersect, &cam, closestObject, lights, sceneTree));
+		                img.set(x, y, phongRender.calc(intersect, renderRay, closestObject, lights, sceneTree));
 		            }
 		        }
 		    }

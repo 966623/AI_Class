@@ -176,7 +176,7 @@ class Polygon: public Object {
 			float beta = areaB/area;
 			float gamma = areaC/area;
 
-			if(alpha >= 0 && alpha <= 1 && beta >= 0 && beta <= 1 && gamma >= 0 && gamma <= 1 && areaA + areaB + areaC <= area + .0000001){
+			if(alpha >= 0 && alpha <= 1 && beta >= 0 && beta <= 1 && gamma >= 0 && gamma <= 1 && areaA + areaB + areaC <= area + .000001){
  				return dist;
 			}
 			else{
